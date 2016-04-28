@@ -57,7 +57,7 @@ namespace oxkiller.Utility
             return r;
         }
 
-        public static List<string> getAllPossibleInitials(string str, int limit = 6)
+        public static List<string> getAllPossibleInitials(string str, int limit = 8)
         {
             List<string> result = new List<string>();
             if (limit > str.Length) limit = str.Length;

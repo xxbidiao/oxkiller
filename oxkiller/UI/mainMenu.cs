@@ -27,5 +27,11 @@ namespace oxkiller.UI
             ConversionTest frm = new ConversionTest();
             frm.Show();
         }
+
+        private void startSearchingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchForm frm = new SearchForm();
+            frm.Show();
+        }
     }
 }
