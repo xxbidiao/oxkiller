@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +39,9 @@
             this.loadDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startSearchingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aQFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +54,7 @@
             this.toolsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(282, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(521, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -61,7 +65,7 @@
             this.configurationToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // toolsToolStripMenuItem
@@ -84,6 +88,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // configurationToolStripMenuItem
             // 
@@ -101,9 +106,12 @@
             // 
             // loadDatabaseToolStripMenuItem
             // 
+            this.loadDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aQFormatToolStripMenuItem});
             this.loadDatabaseToolStripMenuItem.Name = "loadDatabaseToolStripMenuItem";
-            this.loadDatabaseToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.loadDatabaseToolStripMenuItem.Text = "Load Database";
+            this.loadDatabaseToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.loadDatabaseToolStripMenuItem.Text = "Import";
+            this.loadDatabaseToolStripMenuItem.Click += new System.EventHandler(this.loadDatabaseToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
@@ -120,15 +128,32 @@
             this.startSearchingToolStripMenuItem.Text = "Start Searching";
             this.startSearchingToolStripMenuItem.Click += new System.EventHandler(this.startSearchingToolStripMenuItem_Click);
             // 
+            // aQFormatToolStripMenuItem
+            // 
+            this.aQFormatToolStripMenuItem.Name = "aQFormatToolStripMenuItem";
+            this.aQFormatToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.aQFormatToolStripMenuItem.Text = "Q A format";
+            this.aQFormatToolStripMenuItem.Click += new System.EventHandler(this.aQFormatToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(471, 75);
+            this.label1.TabIndex = 1;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.ClientSize = new System.Drawing.Size(521, 137);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
-            this.Text = "mainMenu";
+            this.Text = "OX Event Killer Solver";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -149,5 +174,8 @@
         private System.Windows.Forms.ToolStripMenuItem conversionTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startSearchingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aQFormatToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

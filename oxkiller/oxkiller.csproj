@@ -36,6 +36,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>external\ChnCharInfo.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>external\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,10 +72,13 @@
     <Compile Include="UI\SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\FileManager.cs" />
+    <Compile Include="Utility\JSONManager.cs" />
     <Compile Include="Utility\ListExtension.cs" />
     <Compile Include="Utility\pinyin.cs" />
     <Compile Include="Utility\Question.cs" />
     <Compile Include="Utility\QuestionGenerator.cs" />
+    <Compile Include="Utility\QuestionImporter.cs" />
     <Compile Include="Utility\QuestionIndex.cs" />
     <Compile Include="Utility\QuestionMemoryDB.cs" />
     <EmbeddedResource Include="UI\ConversionTest.resx">

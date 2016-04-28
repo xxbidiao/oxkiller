@@ -120,4 +120,15 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Welcome to OX killer, the Mabinogi OX Event Helper!
+The database has been automatically loaded if exist.
+Select "Search" to start lookup.
+Select "File" =&gt; "Import" to import questions to database.
+Select "Tools" to view useful tools.
+</value>
+  </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>159, 17</value>
+  </metadata>
 </root>

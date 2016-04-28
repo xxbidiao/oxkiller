@@ -4,14 +4,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace oxkiller.Utility
 {
     public class QuestionMemoryDB
     {
+        #region singleton
+
+        public static QuestionMemoryDB DBObject = new QuestionMemoryDB();
+
+        public static QuestionMemoryDB getDB()
+        {
+            if (DBObject == null)
+                DBObject = new QuestionMemoryDB();
+            return DBObject;
+        }
+
+        public static void setDB(QuestionMemoryDB qdbNew)
+        {
+            DBObject = qdbNew;
+        }
+
+        QuestionMemoryDB()
+        {
+
+        }
+
+        #endregion
+
+        #region properties
+
         public List<Question> allQuestion = new List<Question>();
 
         bool sorted = false;
+
+        #endregion
+
+        #region logic
 
         /// <summary>
         /// Get possible questions using index.
@@ -50,5 +80,8 @@ namespace oxkiller.Utility
             allQuestion.Sort((q1,q2)=>q1.index.CompareTo(q2.index));
             sorted = true;
         }
+
+        #endregion
+
     }
 }

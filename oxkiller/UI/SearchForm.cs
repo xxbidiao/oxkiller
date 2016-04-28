@@ -13,7 +13,7 @@ namespace oxkiller.UI
 {
     public partial class SearchForm : Form
     {
-        QuestionMemoryDB qdb = new QuestionMemoryDB();
+        QuestionMemoryDB qdb = QuestionMemoryDB.getDB();
 
         int maxResult = 10;
 
@@ -49,15 +49,16 @@ namespace oxkiller.UI
 
         private void SearchForm_Load(object sender, EventArgs e)
         {
-            qdb.addQuestion("一加一等于二", "O");
-            qdb.addQuestion("行行好行行好","O");
-            qdb.addQuestion("一加一等于三", "X");
-            qdb.addQuestion("一加二等于二", "X");
-            qdb.addQuestion("一加二等于三", "O");
-            qdb.addQuestion("一加三等于二", "X");
-            qdb.addQuestion("二加一等于二", "X");
-            qdb.addQuestion("二加一等于二", "X");
-            qdb.sort();
+
+            FileManager fm = new FileManager();
+            //fm.writeFileWithGeneratedPath(qdb, "QuestionDB","txt");
+            //qdb = (QuestionMemoryDB)fm.readFileWithGeneratedPath("QuestionDB", "txt", typeof(QuestionMemoryDB));
+            //QuestionMemoryDB.setDB(qdb);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
