@@ -57,6 +57,11 @@ namespace oxkiller.UI
 
             FileManager fm = new FileManager();
             qdb = QuestionMemoryDB.getDB();
+            if(qdb.allQuestion.Count < 1)
+            {
+                MessageBox.Show("No question found. Please import database first.", "Empty Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
             //fm.writeFileWithGeneratedPath(qdb, "QuestionDB","txt");
             //qdb = (QuestionMemoryDB)fm.readFileWithGeneratedPath("QuestionDB", "txt", typeof(QuestionMemoryDB));
             //QuestionMemoryDB.setDB(qdb);
