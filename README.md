@@ -33,3 +33,4 @@ Using this program, you can achieve realtime lookup using initials in a database
 
 ## You can help! （你也可以帮忙！）
 * Enhance the database by helping out editing raw text. （请考虑帮忙扩充和修正题库。）
+* Default database thanks to http://www.yydzh.com/read.php?tid=1876281#s
