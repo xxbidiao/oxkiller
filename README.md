@@ -1,6 +1,8 @@
 # oxkiller
 OX event answering helper for mabinogi
 
+Download （下载）: https://github.com/xxbidiao/oxkiller/releases
+
 Welcome to OXkiller project site!
 欢迎来到洛奇OX帮助器的Github站！
 
