@@ -26,9 +26,11 @@ namespace oxkiller.Utility
                 if (String.IsNullOrWhiteSpace(line)) continue;
                 try
                 {
-                    string cleanLine = line.Split('(')[0];
-                    cleanLine = line.Split('（')[0];
+                    string cleanLine = line;
                     cleanLine = Regex.Replace(cleanLine, @"\s+", "");
+                    cleanLine = cleanLine.Split('(')[0];
+                    cleanLine = cleanLine.Split('（')[0];
+
                     QuestionMemoryDB.getDB().addQuestion(cleanLine.Substring(0, cleanLine.Length - 1), cleanLine.Substring(cleanLine.Length - 1, 1));
                     count++;
                 }
@@ -38,6 +40,7 @@ namespace oxkiller.Utility
                     //MessageBox.Show("Failed to import the following line:" + line);
                 }
             }
+            QuestionMemoryDB.getDB().sort();
             return count;
         }
     }
