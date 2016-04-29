@@ -32,11 +32,13 @@ namespace oxkiller.UI
             if(e.KeyChar == (char)Keys.Enter)
             {
                 searchForQuestion();
+                textBox1.Text = "";
             }
         }
 
         private void searchForQuestion()
         {
+            if (textBox1.Text.Length < 1) return;
             List<string> allInitial = new List<string>();
             allInitial.Add(textBox1.Text.ToUpper());
             List<string> result = new List<string>();

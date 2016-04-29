@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>输入问题的首字母</value>
+    <value>输入问题的首字母，直接显示结果，按Enter清空（结果不消失）</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>查询答案</value>

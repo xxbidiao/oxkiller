@@ -38,14 +38,14 @@
             // 
             // listBox1
             // 
-            resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.Name = "listBox1";
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.textBox1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -64,6 +64,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox1);
             this.Name = "SearchForm";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.SearchForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
