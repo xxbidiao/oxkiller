@@ -48,7 +48,8 @@ namespace oxkiller.Utility
             {
                 long currentCharInitial = 1 + cleanInitials[i] - 'A';
                 if (currentCharInitial < 0) currentCharInitial = 0; //TODO: currently only for spaces - not yet dealing with bad input
-                if (currentCharInitial > 31) currentCharInitial = 31;
+                if (currentCharInitial > 26) currentCharInitial = 0;
+                if (cleanInitials[i] == charNextToZ) currentCharInitial = 31;
                 result += currentCharInitial * locationMoverLookup[i];
             }
             return result;

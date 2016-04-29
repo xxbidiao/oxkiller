@@ -24,33 +24,39 @@ namespace oxkiller.UI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            searchForQuestion();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == (char)Keys.Enter)
             {
-                List<string> allInitial = new List<string>();
-                allInitial.Add(textBox1.Text.ToUpper());
-                List<string> result = new List<string>();
-                foreach(string s in allInitial)
-                {
-                    List<Question> singleResult = qdb.getQuestion(s);
-                    foreach(Question q in singleResult)
-                    {
-                        result.Add(q.ToString());
-                    }
-                    if(result.Count > maxResult) break;
-                }
-                listBox1.DataSource = result;
+                searchForQuestion();
             }
+        }
+
+        private void searchForQuestion()
+        {
+            List<string> allInitial = new List<string>();
+            allInitial.Add(textBox1.Text.ToUpper());
+            List<string> result = new List<string>();
+            foreach (string s in allInitial)
+            {
+                List<Question> singleResult = qdb.getQuestion(s);
+                foreach (Question q in singleResult)
+                {
+                    result.Add(q.ToString());
+                }
+                if (result.Count > maxResult) break;
+            }
+            listBox1.DataSource = result;
         }
 
         private void SearchForm_Load(object sender, EventArgs e)
         {
 
             FileManager fm = new FileManager();
+            qdb = QuestionMemoryDB.getDB();
             //fm.writeFileWithGeneratedPath(qdb, "QuestionDB","txt");
             //qdb = (QuestionMemoryDB)fm.readFileWithGeneratedPath("QuestionDB", "txt", typeof(QuestionMemoryDB));
             //QuestionMemoryDB.setDB(qdb);
