@@ -30,8 +30,16 @@ namespace oxkiller.Utility
                     cleanLine = Regex.Replace(cleanLine, @"\s+", "");
                     cleanLine = cleanLine.Split('(')[0];
                     cleanLine = cleanLine.Split('（')[0];
+                    for (int currentStart = 0; currentStart < cleanLine.Length-1; currentStart++ )
+                    {
+                        string cleanLineSub = cleanLine.Substring(currentStart);
+                        QuestionMemoryDB.getDB().addQuestion(
+                            cleanLineSub.Substring(0, cleanLineSub.Length - 1), 
+                            cleanLineSub.Substring(cleanLineSub.Length - 1, 1),
+                            cleanLine.Substring(0,cleanLine.Length - 1)
+                            );
+                    }
 
-                    QuestionMemoryDB.getDB().addQuestion(cleanLine.Substring(0, cleanLine.Length - 1), cleanLine.Substring(cleanLine.Length - 1, 1));
                     count++;
                 }
                 catch (Exception)

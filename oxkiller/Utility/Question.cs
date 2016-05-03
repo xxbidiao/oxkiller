@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,16 @@ namespace oxkiller.Utility
             this.index = index;
             this.question = question;
             this.answer = answer;
+            this.text = question;
+        }
+
+        [JsonConstructor]
+        public Question(long index, string question, string answer, string text)
+        {
+            this.index = index;
+            this.question = question;
+            this.answer = answer;
+            this.text = text;
         }
 
 
@@ -34,9 +45,14 @@ namespace oxkiller.Utility
         /// </summary>
         public string answer;
 
+        /// <summary>
+        /// Full text of the question.
+        /// </summary>
+        public string text;
+
         public override string ToString()
         {
-            return "[" + answer + "]" + question;
+            return "[" + answer + "]" + text+"("+question+")";
         }
     }
 }
