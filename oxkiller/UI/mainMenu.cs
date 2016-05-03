@@ -34,7 +34,15 @@ namespace oxkiller.UI
         private void startSearchingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SearchForm frm = new SearchForm();
-            frm.Show();
+            try
+            {
+                frm.Show();
+            }
+            catch (Exception)
+            {
+                //do nothing
+            }
+
         }
 
         private void loadDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
