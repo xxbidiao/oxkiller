@@ -18,7 +18,7 @@ Using this program, you can achieve realtime lookup using initials in a database
 
 ## Features（特色）
 * Import statements and its answers in specific format （可以导入题库）
-* Search statements using incomplete initials （使用不完整首字母搜索）
+* Search statements using incomplete initials starting from anywhere in string （使用不完整首字母搜索从字符串任何地方开始搜索）
 * Automatically generates Chinese Pinyin initials and deal with multiple pinyin conversion problem. （自动生成中文拼音首字母并处理多音字问题）
 * Contains a Chinese sentence to pinyin initial conversion tool (restrictions apply) （含有一个中文到拼音首字母的转换工具（有限制））
 
